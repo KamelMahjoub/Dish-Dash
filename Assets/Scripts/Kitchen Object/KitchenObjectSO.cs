@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu()]
-public class KitchenObjectSO : MonoBehaviour
+public class KitchenObjectSO : ScriptableObject
 {
     public GameObject prefab;
     public Sprite sprite;

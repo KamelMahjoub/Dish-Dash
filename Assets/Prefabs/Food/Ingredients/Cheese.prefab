@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2590981683080408802
+--- !u!1001 &1683271739632042525
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -61,10 +61,33 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6c49ec7c5e2e46641b4c32e7ff3c8759,
         type: 3}
       propertyPath: m_Name
-      value: food_ingredient_cheese
+      value: Cheese
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c49ec7c5e2e46641b4c32e7ff3c8759,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 793234186397806161}
   m_SourcePrefab: {fileID: 100100000, guid: 6c49ec7c5e2e46641b4c32e7ff3c8759, type: 3}
+--- !u!1 &1989825137154064204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6c49ec7c5e2e46641b4c32e7ff3c8759,
+    type: 3}
+  m_PrefabInstance: {fileID: 1683271739632042525}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &793234186397806161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989825137154064204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcfcc18d968c9104eb6eb60c87fb0adb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kitchenObjectSO: {fileID: 11400000, guid: d18d45ae740847f4cb9028ab3071aaa3, type: 2}

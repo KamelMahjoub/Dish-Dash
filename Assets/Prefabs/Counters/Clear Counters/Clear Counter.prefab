@@ -93,6 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1983047062790454714}
   - component: {fileID: 4871773644065974481}
+  - component: {fileID: 7190307669668123581}
   m_Layer: 6
   m_Name: Clear Counter
   m_TagString: Untagged
@@ -139,6 +140,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.0310528, y: 1.2035041, z: 2.9849703}
   m_Center: {x: -0.014454961, y: 1.1026365, z: 0.0032798052}
+--- !u!114 &7190307669668123581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2919838676332330386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39248ed4469afcf479c24439e3a0cb82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  counterTopPoint: {fileID: 6054537955941737755}
+  kitchenObjectSO: {fileID: 11400000, guid: d18d45ae740847f4cb9028ab3071aaa3, type: 2}
 --- !u!1 &4347147915926203740
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1736638251820540355}
+  - component: {fileID: 2732357196509445170}
   m_Layer: 0
   m_Name: Selected
   m_TagString: Untagged
@@ -285,3 +301,18 @@ Transform:
   - {fileID: 1444727080698987407}
   m_Father: {fileID: 1983047062790454714}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2732357196509445170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8272454491338652512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32a7ab78d4fe9a4391163dec739bc30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseCounter: {fileID: 7190307669668123581}
+  visualGameObjectArray:
+  - {fileID: 5177383178161604561}

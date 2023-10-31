@@ -104,13 +104,16 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
         
         Vector3 moveDirection = new Vector3(inputVector.x, 0f, inputVector.y);
 
+        float lineHeight = 0.5f;
+
         //keep checking for interaction when stopped moving
         if (moveDirection != Vector3.zero)
             lastInteractDirection = moveDirection;
         
         float interactDistance = 2f;
-
-        if (Physics.Raycast(transform.position, lastInteractDirection, out RaycastHit raycastHit, interactDistance, counterLayerMask))
+        
+       
+        if (Physics.Raycast(transform.position + Vector3.up * lineHeight , lastInteractDirection, out RaycastHit raycastHit, interactDistance, counterLayerMask))
         {
             if (raycastHit.transform.TryGetComponent(out BaseCounter baseCounter))
             {
