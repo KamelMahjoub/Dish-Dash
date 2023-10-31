@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,12 +6,29 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     
+    public static Player Instance { get; private set; }
     
     [SerializeField] private float movementSpeed = 7f;
     
-    public bool IsWalking { private set; get; }
+    [SerializeField] private GameInput gameInput;
     
-  /*  
+    public bool IsWalking { private set; get; }
+
+    private void Awake()
+    {
+        //singleton
+        if (Instance != null)
+        {
+            Debug.LogError("There is more than one player instance");
+        }
+        Instance = this;
+    }
+
+    private void Update()
+    {
+        HandleMovement();
+    }
+
     private void HandleMovement()
     {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
@@ -61,5 +79,5 @@ public class Player : MonoBehaviour
         
         transform.forward = Vector3.Slerp(transform.forward,moveDirection,Time.deltaTime * rotateSpeed);
     }
-    */
+    
 }
