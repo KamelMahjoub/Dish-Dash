@@ -40,13 +40,30 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
         Instance = this;
     }
     
+    
+    private void Start()
+    {
+        gameInput.OnInteractAction += GameInput_OnInteractAction;
+       
+    }
 
     private void Update()
     {
        HandleMovement();
        HandleInteractions();
     }
- 
+    
+    
+    private void GameInput_OnInteractAction(object sender, EventArgs e)
+    {
+       // if (!GameManager.Instance.IsGamePlaying) return;
+        
+        if (selectedCounter != null)
+        {
+            selectedCounter.Interact(this);
+        }
+    }
+    
     private void HandleMovement()
     {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();

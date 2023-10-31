@@ -2,10 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameInput : MonoBehaviour
 {
     public static GameInput Instance { get; private set; }
+    
+    public event EventHandler OnInteractAction;
 
     private PlayerInputActions playerInputActions;
 
@@ -18,7 +21,10 @@ public class GameInput : MonoBehaviour
         playerInputActions = new PlayerInputActions();
 
         playerInputActions.Player.Enable();
+        
+        playerInputActions.Player.Interaction.performed += InteractPerformed;
     }
+    
 
     public Vector2 GetMovementVectorNormalized()
     {
@@ -27,5 +33,19 @@ public class GameInput : MonoBehaviour
         inputVector = inputVector.normalized;
 
         return inputVector;
+    }
+    
+    
+    private void InteractPerformed(InputAction.CallbackContext obj)
+    {
+        OnInteractAction?.Invoke(this, EventArgs.Empty);
+    }
+    
+    //Unsubscribing from events whenever the player goes back to the main menu 
+    private void OnDestroy()
+    {
+        playerInputActions.Player.Interaction.performed -= InteractPerformed;
+        
+        playerInputActions.Dispose();
     }
 }
