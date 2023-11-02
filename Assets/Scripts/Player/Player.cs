@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour, IKitchenObjectHolder
@@ -13,6 +14,8 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
 
     public event EventHandler OnPickedSomething;
     public event EventHandler<OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
+
+    public event EventHandler OnCut;
 
     public class OnSelectedCounterChangedEventArgs : EventArgs
     {
@@ -31,7 +34,9 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
 
     public bool IsWalking { private set; get; }
     public bool IsCarrying { private set; get; }
-
+    
+    public bool IsCutting { set; get; }
+    
     private BaseCounter selectedCounter;
 
     private Vector3 lastInteractDirection;
@@ -54,6 +59,8 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
     private void Start()
     {
         gameInput.OnInteractAction += GameInput_OnInteractAction;
+        gameInput.OnInteractAlternateAction += GameInput_OnInteractAlternateAction;
+        IsCutting = false;
     }
 
     private void Update()
@@ -72,6 +79,19 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
         if (selectedCounter != null)
         {
             selectedCounter.Interact(this);
+        }
+    }
+
+    private void GameInput_OnInteractAlternateAction(object sender, EventArgs e)
+    {
+        //if (!GameManager.Instance.IsGamePlaying) return;
+
+        if (selectedCounter != null && !HasKitchenObject())
+        {
+            if (selectedCounter.GetType() == typeof(CuttingCounter) && !IsCutting)
+            {
+                selectedCounter.InteractAlternate(this);
+            }
         }
     }
 
@@ -196,5 +216,10 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
     public void ClearKitchenObject()
     {
         kitchenObject = null;
+    }
+
+    public void Cut()
+    {
+        OnCut?.Invoke(this, EventArgs.Empty); 
     }
 }

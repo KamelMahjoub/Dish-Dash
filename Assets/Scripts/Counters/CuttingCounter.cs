@@ -3,31 +3,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CuttingCounter : BaseCounter,IHasProgress
+public class CuttingCounter : BaseCounter, IHasProgress
 {
-  public static event EventHandler OnAnyCut;
+    public static event EventHandler OnAnyCut;
     public event EventHandler<IHasProgress.OnProgressChangedEventArgs> OnProgressChanged;
+
 
     public class OnProgressChangedEventArgs : EventArgs
     {
         public float progressNormalized;
     }
-    
+
+
     public event EventHandler OnCut;
-    
-    
+
     [SerializeField] private CuttingRecipeSO[] cuttingRecipeSoArray;
+
+    [SerializeField] private GameObject counterKnife;
+
+    [SerializeField] private GameObject progressBar;
 
     private int cuttingProgress;
 
-    public new  static void ResetStaticData()
+
+    private void Start()
+    {
+        progressBar.SetActive(false);
+    }
+
+
+    public new static void ResetStaticData()
     {
         OnAnyCut = null;
     }
-    
-    
-    
-    
+
     public override void Interact(Player player)
     {
         if (!HasKitchenObject())
@@ -43,15 +52,14 @@ public class CuttingCounter : BaseCounter,IHasProgress
                     player.GetKitchenObject().SetKitchenObjectParent(this);
 
                     CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetKitchenObject().KitchenObjectSO);
-                    
+
                     cuttingProgress = 0;
-                    
+
                     OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
                     {
-                        progressNormalized =  (float) cuttingProgress / cuttingRecipeSO.cuttingProgressMax
+                        progressNormalized = (float) cuttingProgress / cuttingRecipeSO.cuttingProgressMax
                     });
                 }
-                
             }
             else
             {
@@ -66,7 +74,8 @@ public class CuttingCounter : BaseCounter,IHasProgress
                 if (player.GetKitchenObject().TryGetPlate(out PlateKitchenObject plateKitchenObject))
                 {
                     //player is holding a plate
-         
+                    progressBar.SetActive(false);
+
                     //gets the kitchen object thats on the counter
                     if (plateKitchenObject.TryAddIngredient(GetKitchenObject().KitchenObjectSO))
                     {
@@ -78,42 +87,59 @@ public class CuttingCounter : BaseCounter,IHasProgress
             {
                 //player isnt carrying anything
                 GetKitchenObject().SetKitchenObjectParent(player);
+                progressBar.SetActive(false);
             }
-        
         }
     }
 
     public override void InteractAlternate(Player player)
     {
-        
         if (HasKitchenObject() && HasRecipeWithInput(GetKitchenObject().KitchenObjectSO))
         {
             //there is a kitchen object here and it can be cut
-            cuttingProgress++;
-            
-            OnCut?.Invoke(this,EventArgs.Empty);
-            OnAnyCut?.Invoke(this,EventArgs.Empty);
-            
-            
-            
+
+
+            progressBar.SetActive(true);
+
+            PlayCutAnimation();
+
+            counterKnife.SetActive(false);
+
+
             CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetKitchenObject().KitchenObjectSO);
-            
-             
+
+
+            cuttingProgress++;
+
+            OnCut?.Invoke(this, EventArgs.Empty);
+            OnAnyCut?.Invoke(this, EventArgs.Empty);
+
             OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
             {
-                progressNormalized =  (float) cuttingProgress / cuttingRecipeSO.cuttingProgressMax
+                progressNormalized = (float) cuttingProgress / cuttingRecipeSO.cuttingProgressMax
             });
+
+
+            StartCoroutine(Cooldown());
 
             if (cuttingProgress >= cuttingRecipeSO.cuttingProgressMax)
             {
                 KitchenObjectSO outputKitchenObjectSO = GetOutputForInput(GetKitchenObject().KitchenObjectSO);
-            
+
                 //can cut
                 GetKitchenObject().DestroySelf();
-            
+
+                progressBar.SetActive(false);
+
                 KitchenObject.SpawnKitchenObject(outputKitchenObjectSO, this);
             }
         }
+    }
+
+    private IEnumerator Cooldown()
+    {
+        yield return new WaitForSeconds(0.95f);
+        counterKnife.SetActive(true);
     }
 
 
@@ -144,8 +170,12 @@ public class CuttingCounter : BaseCounter,IHasProgress
                 return cuttingRecipeSO;
             }
         }
+
         return null;
     }
 
-
+    private void PlayCutAnimation()
+    {
+        Player.Instance.Cut();
+    }
 }

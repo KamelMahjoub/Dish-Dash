@@ -298,7 +298,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6820e50a72696664cb1a9b5484ecee33, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 043ba29ed84db76449c90fb782181400, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6820e50a72696664cb1a9b5484ecee33, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 043ba29ed84db76449c90fb782181400, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -770,3 +770,5 @@ MonoBehaviour:
   counterTopPoint: {fileID: 6199440216326945037}
   cuttingRecipeSoArray:
   - {fileID: 11400000, guid: 9ff12c07be9562a46b741435be14a72e, type: 2}
+  counterKnife: {fileID: 218170463433214833}
+  progressBar: {fileID: 859261987687817323}
