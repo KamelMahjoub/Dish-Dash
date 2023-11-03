@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 4266674266123552835}
   - component: {fileID: 5221712875896581651}
   m_Layer: 0
-  m_Name: SelectedCounterVisual
+  m_Name: SelectedCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
