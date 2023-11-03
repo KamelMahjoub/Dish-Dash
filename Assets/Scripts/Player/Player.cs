@@ -172,8 +172,7 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
             lastInteractDirection = moveDirection;
 
         float interactDistance = 2f;
-
-        Debug.DrawRay(transform.position + Vector3.up * lineHeight, lastInteractDirection * interactDistance, Color.green);
+        
         
         if (Physics.Raycast(transform.position + Vector3.up * lineHeight, lastInteractDirection,
                 out RaycastHit raycastHit, interactDistance, counterLayerMask))
@@ -181,7 +180,6 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
             if (raycastHit.transform.TryGetComponent(out BaseCounter baseCounter))
             {
                 
-                Debug.Log("hit");
                 
                 //has clear counter
                 if (baseCounter != selectedCounter)

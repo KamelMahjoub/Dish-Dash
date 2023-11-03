@@ -6,6 +6,7 @@ using UnityEngine;
 public class TrashCounter : BaseCounter
 {
     public static event EventHandler OnAnyObjectTrashed;
+    public  event EventHandler OnLidOpen;
 
     public new static void ResetStaticData()
     {
@@ -19,6 +20,7 @@ public class TrashCounter : BaseCounter
         {
             player.GetKitchenObject().DestroySelf();
             OnAnyObjectTrashed?.Invoke(this, EventArgs.Empty);
+            OnLidOpen?.Invoke(this, EventArgs.Empty);
         }
     }
 }
