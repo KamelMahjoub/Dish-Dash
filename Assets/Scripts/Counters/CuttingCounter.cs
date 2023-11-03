@@ -98,7 +98,6 @@ public class CuttingCounter : BaseCounter, IHasProgress
         {
             //there is a kitchen object here and it can be cut
 
-
             progressBar.SetActive(true);
 
             PlayCutAnimation();

@@ -28,6 +28,8 @@ public class PlayerAnimations : MonoBehaviour
     private void Player_OnCutPerformed(object sender, EventArgs e)
     {
         Player.Instance.IsCutting = true;
+        Player.Instance.CanMove = false;
+        Player.Instance.CanInteract = false;
         
         playerKnife.SetActive(true);
         
@@ -65,6 +67,8 @@ public class PlayerAnimations : MonoBehaviour
     {
         yield return new WaitForSeconds(0.95f);
         Player.Instance.IsCutting = false;
+        Player.Instance.CanMove = true;
+        Player.Instance.CanInteract = true;
         playerKnife.SetActive(false);
     }
     

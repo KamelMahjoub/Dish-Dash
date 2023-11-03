@@ -37,6 +37,10 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
     
     public bool IsCutting { set; get; }
     
+    public bool CanMove { set; get; }
+    
+    public bool CanInteract { set; get; }
+    
     private BaseCounter selectedCounter;
 
     private Vector3 lastInteractDirection;
@@ -53,6 +57,9 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
         }
 
         Instance = this;
+
+        CanMove = true;
+        CanInteract = true;
     }
 
 
@@ -61,13 +68,16 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
         gameInput.OnInteractAction += GameInput_OnInteractAction;
         gameInput.OnInteractAlternateAction += GameInput_OnInteractAlternateAction;
         IsCutting = false;
+        
     }
 
     private void Update()
     {
-        HandleMovement();
+        if(CanMove)
+            HandleMovement();
+        
         HandleInteractions();
-
+        
         IsCarrying = HasKitchenObject();
     }
 
@@ -76,7 +86,7 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
     {
         // if (!GameManager.Instance.IsGamePlaying) return;
 
-        if (selectedCounter != null)
+        if ((selectedCounter != null) &&  (CanInteract))
         {
             selectedCounter.Interact(this);
         }
