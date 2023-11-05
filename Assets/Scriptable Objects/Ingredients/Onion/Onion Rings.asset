@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be8c3fbc89f7f74fa0ab4167ae38d96, type: 3}
+  m_Name: Onion Rings
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 5196857592610760699, guid: 6b450ca2beb9e8c4f8ff1ff0c7f97ec6, type: 3}
+  sprite: {fileID: 21300000, guid: b73ee1c26d66ebb49b546512ab644299, type: 3}
+  objectName: Onion Rings
