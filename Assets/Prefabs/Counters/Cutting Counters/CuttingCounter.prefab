@@ -789,6 +789,7 @@ MonoBehaviour:
   cuttingRecipeSoArray:
   - {fileID: 11400000, guid: 9ff12c07be9562a46b741435be14a72e, type: 2}
   counterKnife: {fileID: 4919609014273566685}
+  counterKnifeSelected: {fileID: 6557879411905416355}
   progressBar: {fileID: 859261987687817323}
 --- !u!1001 &5225476859987810956
 PrefabInstance:

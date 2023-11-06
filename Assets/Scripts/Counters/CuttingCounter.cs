@@ -20,6 +20,7 @@ public class CuttingCounter : BaseCounter, IHasProgress
     [SerializeField] private CuttingRecipeSO[] cuttingRecipeSoArray;
 
     [SerializeField] private GameObject counterKnife;
+    [SerializeField] private GameObject counterKnifeSelected;
 
     [SerializeField] private GameObject progressBar;
 
@@ -103,6 +104,7 @@ public class CuttingCounter : BaseCounter, IHasProgress
             PlayCutAnimation();
 
             counterKnife.SetActive(false);
+            counterKnifeSelected.SetActive(false);
 
 
             CuttingRecipeSO cuttingRecipeSO = GetCuttingRecipeSOWithInput(GetKitchenObject().KitchenObjectSO);
@@ -139,6 +141,7 @@ public class CuttingCounter : BaseCounter, IHasProgress
     {
         yield return new WaitForSeconds(0.95f);
         counterKnife.SetActive(true);
+        counterKnifeSelected.SetActive(true);
     }
 
 

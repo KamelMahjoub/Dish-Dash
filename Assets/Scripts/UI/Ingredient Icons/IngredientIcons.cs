@@ -33,7 +33,7 @@ public class IngredientIcons : MonoBehaviour
     
         foreach (KitchenObjectSO kitchenObjectSO in plateKitchenObject.KitchenObjectSOList)
         {
-            Debug.Log(kitchenObjectSO);
+            
             Transform iconGameObject =  Instantiate(iconTemplate, transform);
             iconGameObject.gameObject.SetActive(true);
             iconGameObject.GetComponent<SingleIngredientIcon>().SetKitchenObjectSo(kitchenObjectSO);
