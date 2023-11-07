@@ -788,6 +788,9 @@ MonoBehaviour:
   counterTopPoint: {fileID: 6199440216326945037}
   cuttingRecipeSoArray:
   - {fileID: 11400000, guid: 9ff12c07be9562a46b741435be14a72e, type: 2}
+  - {fileID: 11400000, guid: 6c478b83abb15764e9d20cf9dee8b068, type: 2}
+  - {fileID: 11400000, guid: c173982c23b1ab7449fdd184f60e1bc9, type: 2}
+  - {fileID: 11400000, guid: 2678f7ad89e01674596851037f704d62, type: 2}
   counterKnife: {fileID: 4919609014273566685}
   counterKnifeSelected: {fileID: 6557879411905416355}
   progressBar: {fileID: 859261987687817323}
