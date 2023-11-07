@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1259487952545964591}
   - component: {fileID: 215048544003217719}
   - component: {fileID: 9167935898342653930}
-  - component: {fileID: 293174674709783096}
-  - component: {fileID: 7777380087423987326}
+  - component: {fileID: 2409535285053918065}
+  - component: {fileID: 3060290035450442245}
   m_Layer: 5
   m_Name: ProgressBarUI
   m_TagString: Untagged
@@ -36,7 +36,6 @@ RectTransform:
   - {fileID: 1638728005161180203}
   - {fileID: 4887143440684090865}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -60,7 +59,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -86,7 +87,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &9167935898342653930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +105,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &293174674709783096
+--- !u!114 &2409535285053918065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,12 +114,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 332414832726243868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a62a30f34d5a0d4b94949b49588734d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3193583a5f8f87143b20715eee07b83d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cuttingCounter: {fileID: 0}
+  hasProgressGameObject: {fileID: 0}
   barImage: {fileID: 7342290891393204210}
---- !u!114 &7777380087423987326
+--- !u!114 &3060290035450442245
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,10 +128,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 332414832726243868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07b9a396489932540b8ddaaa0e8c75a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 8020b682b237cd642b12ce26848e5697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 3
+  mode: 0
 --- !u!1 &1543272123307669554
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +164,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3236540368174914088}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -254,7 +254,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3236540368174914088}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
