@@ -115,13 +115,15 @@ public class CuttingCounter : BaseCounter, IHasProgress
             OnCut?.Invoke(this, EventArgs.Empty);
             OnAnyCut?.Invoke(this, EventArgs.Empty);
 
+            StartCoroutine(Cooldown());
+            
             OnProgressChanged?.Invoke(this, new IHasProgress.OnProgressChangedEventArgs
             {
                 progressNormalized = (float) cuttingProgress / cuttingRecipeSO.cuttingProgressMax
             });
 
 
-            StartCoroutine(Cooldown());
+            
 
             if (cuttingProgress >= cuttingRecipeSO.cuttingProgressMax)
             {
@@ -143,6 +145,8 @@ public class CuttingCounter : BaseCounter, IHasProgress
         counterKnife.SetActive(true);
         counterKnifeSelected.SetActive(true);
     }
+    
+ 
 
 
     private bool HasRecipeWithInput(KitchenObjectSO inputKitchenObjectSO)
