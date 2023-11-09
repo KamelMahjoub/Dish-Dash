@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3469470585147024c9e509092c4b854d, type: 3}
-  m_Name: Dry Burger
+  m_Name: Lettuce
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: 9bf6e5104e1d7c2479a5ac4a866dc10e, type: 2}
-  - {fileID: 11400000, guid: 1ec470555411dea49837e80427226b24, type: 2}
-  recipeName: Dry Burger
+  - {fileID: 11400000, guid: 5375197426d2d2c499d8121639b92421, type: 2}
+  recipeName: Lettuce
