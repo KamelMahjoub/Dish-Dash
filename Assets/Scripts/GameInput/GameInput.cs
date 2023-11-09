@@ -10,6 +10,8 @@ public class GameInput : MonoBehaviour
     
     public event EventHandler OnInteractAction;
     public event EventHandler OnInteractAlternateAction;
+    
+    public event EventHandler OnPauseAction;
 
     private PlayerInputActions playerInputActions;
 
@@ -26,6 +28,8 @@ public class GameInput : MonoBehaviour
         playerInputActions.Player.Interaction.performed += InteractPerformed;
         
         playerInputActions.Player.AlternateInteraction.performed += InteractAlternatePerformed;
+        
+        playerInputActions.Player.Pause.performed += PausePerformed; 
     }
     
 
@@ -49,10 +53,18 @@ public class GameInput : MonoBehaviour
         OnInteractAlternateAction?.Invoke(this, EventArgs.Empty);
     }
     
+    
+    private void PausePerformed(InputAction.CallbackContext obj)
+    {
+        OnPauseAction?.Invoke(this, EventArgs.Empty);
+    }
+    
     //Unsubscribing from events whenever the player goes back to the main menu 
     private void OnDestroy()
     {
         playerInputActions.Player.Interaction.performed -= InteractPerformed;
+        
+        playerInputActions.Player.Pause.performed -= PausePerformed;  
         
         playerInputActions.Dispose();
     }
