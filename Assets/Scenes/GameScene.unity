@@ -9111,7 +9111,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 278959027}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2963112667014357973, guid: 0c1aacabd62a2ab4cba76cf8bd1eb589,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1328928171}
   m_SourcePrefab: {fileID: 100100000, guid: 0c1aacabd62a2ab4cba76cf8bd1eb589, type: 3}
 --- !u!224 &485907970 stripped
 RectTransform:
@@ -23527,6 +23531,8 @@ MonoBehaviour:
   resumeButton: {fileID: 129065721}
   mainMenuButton: {fileID: 152960292}
   optionsButton: {fileID: 548785435}
+  controlsButton: {fileID: 1451409273}
+  controlsUI: {fileID: 1328928170}
 --- !u!1001 &1315950135
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23749,6 +23755,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1324430293}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1328928170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2963112667014357973, guid: 0c1aacabd62a2ab4cba76cf8bd1eb589,
+    type: 3}
+  m_PrefabInstance: {fileID: 485907969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1328928171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328928170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735eaedbcf291be4e8a9085fd5b6d8ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  closeButton: {fileID: 278959030}
+  pauseMenu: {fileID: 842525914}
+  resumeButton: {fileID: 129065721}
 --- !u!1001 &1329136972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26709,7 +26736,7 @@ PrefabInstance:
     - target: {fileID: 899763615914881311, guid: 8484e335e06426748b5794b5611c5d73,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1160535866736248230, guid: 8484e335e06426748b5794b5611c5d73,
         type: 3}
@@ -28912,7 +28939,7 @@ GameObject:
   - component: {fileID: 1630121846}
   - component: {fileID: 1630121845}
   m_Layer: 5
-  m_Name: OptionsText (1)
+  m_Name: ControlsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36977,7 +37004,7 @@ PrefabInstance:
     - target: {fileID: 8429334519550310042, guid: 48a774f789410a34ca128e9c2d715e3b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
