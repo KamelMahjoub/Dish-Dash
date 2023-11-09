@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Lettuce Slice
   m_EditorClassIdentifier: 
   prefab: {fileID: 2292614090733169010, guid: 304081b4de35e2d47b3710c011abfc92, type: 3}
-  sprite: {fileID: 21300000, guid: 9aad25f242a932f4283a79c2fd88a7e9, type: 3}
+  sprite: {fileID: 21300000, guid: 48a26883e92544643863f96ff29983b7, type: 3}
   objectName: Lettuce Slice

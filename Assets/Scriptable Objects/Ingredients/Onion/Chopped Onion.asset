@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Chopped Onion
   m_EditorClassIdentifier: 
   prefab: {fileID: 7312105562061475976, guid: 1e79e970c330b2242b94df0978c6a32b, type: 3}
-  sprite: {fileID: 21300000, guid: b73ee1c26d66ebb49b546512ab644299, type: 3}
+  sprite: {fileID: 21300000, guid: 818f5e38dadc79c40a250e640bc1936b, type: 3}
   objectName: Chopped Onion
