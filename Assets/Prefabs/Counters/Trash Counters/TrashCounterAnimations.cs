@@ -25,6 +25,5 @@ public class TrashCounterAnimations : MonoBehaviour
     private void TrashCounter_OnPlayerOpenLid(object sender, EventArgs e)
     {
         animator.SetTrigger(OPEN_LID);
-        Debug.Log("DONE");
     }
 }

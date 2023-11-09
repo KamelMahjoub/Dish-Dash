@@ -14,7 +14,7 @@ public class ContainerCounter : BaseCounter
     public override void Interact(Player player)
     {
         //if the player has no object in hand
-        if (!player.HasKitchenObject())
+        if (!player.HasKitchenObject() && GameManager.Instance.IsGamePlaying)
         {
             KitchenObject.SpawnKitchenObject(kitchenObjectSO, player);
             
