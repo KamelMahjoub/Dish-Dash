@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     private void GameInput_OnInteractAction(object sender, EventArgs e)
     {
-        if (state == State.waitingToStart)
+        if (state == State.waitingToStart && isGamePaused == false )
         {
             state = State.CountdownToStart;
             OnStateChanged?.Invoke(this,EventArgs.Empty);
@@ -86,8 +86,7 @@ public class GameManager : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
-
-        Debug.Log(state);
+        
     }
 
     public bool IsGamePlaying => state == State.GamePlaying;
@@ -97,6 +96,8 @@ public class GameManager : MonoBehaviour
     public float GetCountdownToStartTimer() => countdownToStartTimer;
 
     public bool IsGameOver() => state == State.GameOver;
+    
+    public bool IsWaitingToStart() => state == State.waitingToStart;
 
     public float GetGamePlayingTimerNormalized() => 1 - (gamePlayingTimer / gamePlayingTimerMax);
 
