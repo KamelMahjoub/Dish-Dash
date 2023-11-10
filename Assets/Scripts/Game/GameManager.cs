@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     private State state;
     private float countdownToStartTimer = 3f;
     private float gamePlayingTimer;
-    private float gamePlayingTimerMax = 180f;
+    private float gamePlayingTimerMax = 20f;
 
     private bool isGamePaused = false;
 
@@ -96,6 +96,8 @@ public class GameManager : MonoBehaviour
     public float GetCountdownToStartTimer() => countdownToStartTimer;
 
     public bool IsGameOver() => state == State.GameOver;
+    
+    public bool IsGamePaused() => isGamePaused;
     
     public bool IsWaitingToStart() => state == State.waitingToStart;
 

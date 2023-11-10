@@ -24,7 +24,13 @@ public class StoveCounterSounds : MonoBehaviour
     private void Update()
     {
 
-        if (playWarningSound)
+
+        if (GameManager.Instance.IsGamePaused())
+            audioSource.volume = 0;
+        else
+            SetVolume();
+        
+        if (playWarningSound & GameManager.Instance.IsGamePlaying)
         {
             warningSoundTimer -= Time.deltaTime;
             if (warningSoundTimer <= 0)
@@ -32,8 +38,11 @@ public class StoveCounterSounds : MonoBehaviour
                 float warningSoundTimerMax = 0.2f;
                 warningSoundTimer = warningSoundTimerMax;
                 SoundManager.Instance.PlayWarningSound(stoveCounter.transform.position);
-            }  
+            }
         }
+
+
+        
     }
 
     private void StoveCounter_OnProgressChanged(object sender, IHasProgress.OnProgressChangedEventArgs e)
@@ -46,7 +55,7 @@ public class StoveCounterSounds : MonoBehaviour
     {
         bool playSound = e.state is StoveCounter.State.Frying or StoveCounter.State.Fried;
 
-        if (playSound)
+        if (playSound && GameManager.Instance.IsGamePlaying)
         {
             audioSource.Play();
         }
@@ -54,5 +63,11 @@ public class StoveCounterSounds : MonoBehaviour
         {
             audioSource.Pause();
         }
+    }
+
+
+    private void SetVolume()
+    {
+        audioSource.volume = SoundManager.Instance.Volume;
     }
 }
