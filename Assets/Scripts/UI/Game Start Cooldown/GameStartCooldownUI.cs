@@ -35,7 +35,7 @@ public class GameStartCooldownUI : MonoBehaviour
             previousCountdownNumber = countdownNumber;
             
             animator.SetTrigger(NUMBER_POPUP);
-            //SoundManager.Instance.PlayCountdownSound();
+            SoundManager.Instance.PlayCountdownSound();
         }
     }
 
