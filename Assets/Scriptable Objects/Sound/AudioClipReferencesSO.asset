@@ -23,8 +23,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3910a3c7338742643b46e771e6a1c25c, type: 3}
   - {fileID: 8300000, guid: 1f8afadc3be24d44289547a9b4a1b77b, type: 3}
   footstep:
-  - {fileID: 8300000, guid: dc238ca2802c93b4ebf1ddb6f245ad33, type: 3}
-  - {fileID: 8300000, guid: 21c4ae0515a9ffa49adb354937fa6b3f, type: 3}
   - {fileID: 8300000, guid: 68af001b052cb1a40a654f8666b725a7, type: 3}
   - {fileID: 8300000, guid: 44129d2245bcb1345a157548cb79aeb9, type: 3}
   objectDrop:

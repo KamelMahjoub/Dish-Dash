@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8020b682b237cd642b12ce26848e5697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mode: 0
+  mode: 3
 --- !u!114 &7481403456298580080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,6 +786,36 @@ PrefabInstance:
     - target: {fileID: 7543740796149067931, guid: f1a823c261c7c52449ad5c68c97d9ae7,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113608355054008801, guid: f1a823c261c7c52449ad5c68c97d9ae7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113608355054008801, guid: f1a823c261c7c52449ad5c68c97d9ae7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113608355054008801, guid: f1a823c261c7c52449ad5c68c97d9ae7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113608355054008801, guid: f1a823c261c7c52449ad5c68c97d9ae7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113608355054008801, guid: f1a823c261c7c52449ad5c68c97d9ae7,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8632036669402229120, guid: f1a823c261c7c52449ad5c68c97d9ae7,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
