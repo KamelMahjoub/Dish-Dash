@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3469470585147024c9e509092c4b854d, type: 3}
-  m_Name: Lettuce
+  m_Name: Bun n' Cheese
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
-  - {fileID: 11400000, guid: 5375197426d2d2c499d8121639b92421, type: 2}
-  recipeName: Lettuce
+  - {fileID: 11400000, guid: 9bf6e5104e1d7c2479a5ac4a866dc10e, type: 2}
+  - {fileID: 11400000, guid: 1f5c6a2a4599c51438ee39a19c57d7c3, type: 2}
+  recipeName: Bun n' Cheese

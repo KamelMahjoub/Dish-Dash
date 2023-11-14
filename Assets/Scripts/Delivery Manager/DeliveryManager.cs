@@ -48,6 +48,9 @@ public class DeliveryManager : MonoBehaviour
                 OnRecipeSpawned?.Invoke(this, EventArgs.Empty);
             }
         }
+        
+        
+        
     }
 
     public void DeliverRecipe(PlateKitchenObject plateKitchenObject)
@@ -56,9 +59,13 @@ public class DeliveryManager : MonoBehaviour
         {
             PreparedRecipeSO waitingRecipeSO = WaitingRecipeList[i];
 
+            Debug.Log("Recipe : "+i+" "+ waitingRecipeSO);
 
             if (waitingRecipeSO.kitchenObjectSOList.Count == plateKitchenObject.KitchenObjectSOList.Count) ;
             {
+                Debug.Log("Recipe : "+waitingRecipeSO + "Has : "+ waitingRecipeSO.kitchenObjectSOList.Count+ "Items");
+                Debug.Log("Plate  : "+plateKitchenObject.KitchenObjectSOList + "Has : "+ plateKitchenObject.KitchenObjectSOList.Count+ "Items");
+                
                 bool plateContentsMatchesRecipe = true;
                 //has the same number of ingredients
 
@@ -89,6 +96,9 @@ public class DeliveryManager : MonoBehaviour
                 {
                     //player delivered the correct recipe 
                     Debug.Log("Player Delivered the correct recipe");
+                    
+                    Debug.Log("Correct Recipe : "+i+" "+ waitingRecipeSO);
+                    
                     WaitingRecipeList.RemoveAt(i);
 
                     SuccessfulRecipes++;

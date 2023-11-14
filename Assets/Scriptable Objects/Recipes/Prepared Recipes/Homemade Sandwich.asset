@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3469470585147024c9e509092c4b854d, type: 3}
-  m_Name: Tomato
+  m_Name: Homemade Sandwich
   m_EditorClassIdentifier: 
   kitchenObjectSOList:
+  - {fileID: 11400000, guid: 9bf6e5104e1d7c2479a5ac4a866dc10e, type: 2}
+  - {fileID: 11400000, guid: 5375197426d2d2c499d8121639b92421, type: 2}
+  - {fileID: 11400000, guid: 860e88e0ca20a834fac1d0a56fe634ec, type: 2}
   - {fileID: 11400000, guid: b493a1389f3c98343b428e83fe5f09e1, type: 2}
-  recipeName: Tomato
+  recipeName: Homemade Sandwich
