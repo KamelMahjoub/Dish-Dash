@@ -68,6 +68,6 @@ public class StoveCounterSounds : MonoBehaviour
 
     private void SetVolume()
     {
-        audioSource.volume = SoundManager.Instance.Volume;
+        audioSource.volume = SoundManager.Instance.Volume/2;
     }
 }
