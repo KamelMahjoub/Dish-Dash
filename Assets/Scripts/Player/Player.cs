@@ -79,6 +79,7 @@ public class Player : MonoBehaviour, IKitchenObjectHolder
         HandleInteractions();
         
         IsCarrying = HasKitchenObject();
+        
     }
 
 

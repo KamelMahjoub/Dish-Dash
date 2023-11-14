@@ -102,7 +102,7 @@ public class SoundManager : MonoBehaviour
         }
         
         PlayerPrefs.SetFloat(PLAYER_PREFS_SOUND_EFFECTS_VOLUME,Volume);
-        //saving just incase
+        //saving just incase of a crash
         PlayerPrefs.Save();
         
     }
