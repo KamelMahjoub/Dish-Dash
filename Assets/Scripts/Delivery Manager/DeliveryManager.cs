@@ -54,9 +54,6 @@ public class DeliveryManager : MonoBehaviour
     {
         foreach (var waitingRecipe in WaitingRecipeList)
         {
-            // Debug.Log("Recipe : " + i + " " + waitingRecipeSO);
-
-            //Debug.Log(waitingRecipeSO);
 
             if (waitingRecipe.kitchenObjectSOList.Count == plateKitchenObject.KitchenObjectSOList.Count)
             {
@@ -101,9 +98,13 @@ public class DeliveryManager : MonoBehaviour
                     OnRecipeSuccess.Invoke(this, EventArgs.Empty);
                     return;
                 }
-            }
 
-            OnRecipeFailed.Invoke(this, EventArgs.Empty);
+
+
+            }
         }
+
+        OnRecipeFailed.Invoke(this, EventArgs.Empty);  
+        
     }
 }
