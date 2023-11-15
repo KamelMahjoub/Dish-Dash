@@ -9,7 +9,7 @@ public class Loader : MonoBehaviour
     {
         MainMenu,
         GameScene,
-        LoadingScene
+        LoadingScreen
     }
     
     
@@ -20,7 +20,7 @@ public class Loader : MonoBehaviour
         
         Loader.targetScene = targetScene;
         
-        SceneManager.LoadScene(Scene.LoadingScene.ToString());
+        SceneManager.LoadScene(Scene.LoadingScreen.ToString());
         
     }
 
