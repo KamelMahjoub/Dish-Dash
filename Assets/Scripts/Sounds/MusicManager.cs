@@ -22,6 +22,9 @@ public class MusicManager : MonoBehaviour
         audioSource.volume = Volume;
     }
     
+    
+    
+    
     public void ChangeVolume()
     {
         Volume += 0.1f;
