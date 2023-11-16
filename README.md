@@ -8,6 +8,8 @@
 
 ## Links
 
- Further project details can be found [here](https://kamelmahjoub.wixsite.com/portfolio/dishdash). 
+ - Play the game on [itch.io](https://kamelmahjoub.itch.io/pongo).
 
- For contact info, and more projects, please visit my [portfolio](https://kamelmahjoub.wixsite.com/portfolio).
+ - Further project details can be found [here](https://kamelmahjoub.wixsite.com/portfolio/dishdash). 
+
+ - For contact info, and more projects, please visit my [portfolio](https://kamelmahjoub.wixsite.com/portfolio).
