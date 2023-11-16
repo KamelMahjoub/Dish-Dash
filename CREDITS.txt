@@ -1,0 +1,38 @@
+** Game ** 
+
+Some of the game logic is based on this course made by Code Monkey and can be found here : https://www.youtube.com/watch?v=AmGSEH7QcDg
+
+** ICONS **
+
+Game Icons are created by Freepik and can be found here : 
+
+https://www.freepik.com/icon/burger_2403359
+https://www.flaticon.com/free-icon/lettuce_5346088
+https://www.flaticon.com/free-icon/cheese_517612
+https://www.flaticon.com/free-icon/cheese-slice_7507020
+https://www.flaticon.com/free-icon/dish_1021439
+https://www.flaticon.com/free-icon/tomato-slice_5222942
+https://www.flaticon.com/free-icon/tomato_1202125
+https://www.flaticon.com/free-icon/onion_2522907
+https://www.flaticon.com/free-icon/carrot_883760
+https://www.flaticon.com/free-icon/warning_3756712
+https://www.flaticon.com/free-icon/left-arrow-head_44607
+https://www.flaticon.com/free-icon/play_4939944
+https://www.flaticon.com/free-icon/close_1828744
+
+Button Icons are created by Xelu and can be found here : https://opengameart.org/content/free-keyboard-and-controllers-prompts-pack
+
+** MUSIC **
+
+Created by Zakiro and can be found here : https://zakiro101.itch.io/free-casual-game-music-pack-vol-2
+
+Sound Effects are created by by CodeMonkey and can be found here : https://www.youtube.com/watch?v=AmGSEH7QcDg
+
+** Assets **
+
+Player, Counters and Environment assets are created by KayKit and can be found here : https://kaylousberg.itch.io/restaurant-bits 
+
+Trashcan model is made by SpaceZeta and can be found here : https://assetstore.unity.com/packages/3d/props/exterior/plastic-trash-bins-160771
+
+
+
