@@ -10,6 +10,8 @@
 
  - Play the game on [itch.io](https://kamelmahjoub.itch.io/dishdash).
 
+ - Download the source code [here](https://github.com/KamelMahjoub/Dish-Dash/releases/tag/v1.0)). 
+
  - Further project details can be found [here](https://kamelmahjoub.wixsite.com/portfolio/dishdash). 
 
  - For contact info, and more projects, please visit my [portfolio](https://kamelmahjoub.wixsite.com/portfolio).
