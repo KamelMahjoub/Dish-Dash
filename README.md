@@ -8,7 +8,7 @@
 
 ## Links
 
- - Play the game on [itch.io](https://kamelmahjoub.itch.io/pongo).
+ - Play the game on [itch.io](https://kamelmahjoub.itch.io/dishdash).
 
  - Further project details can be found [here](https://kamelmahjoub.wixsite.com/portfolio/dishdash). 
 
