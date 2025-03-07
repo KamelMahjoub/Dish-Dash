@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="740fc412-1bf0-4e60-978e-6d69857d3d3c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Animators/GameStartCooldownUI.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animators/GameStartCooldownUI.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/Input/PlayerInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/Input/PlayerInputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-    </list>
+    <list default="true" id="740fc412-1bf0-4e60-978e-6d69857d3d3c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +85,7 @@
       <workItem from="1738148113061" duration="3035000" />
       <workItem from="1738671217770" duration="138000" />
       <workItem from="1739895064909" duration="2366000" />
-      <workItem from="1741365400202" duration="313000" />
+      <workItem from="1741365400202" duration="2415000" />
     </task>
     <servers />
   </component>
